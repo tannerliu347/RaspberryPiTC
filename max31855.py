@@ -145,9 +145,9 @@ if __name__ == "__main__":
 
     # Multi-chip example
     import time
-    cs_pins = [4, 17, 18, 24]
-    clock_pin = 23
-    data_pin = 22
+    cs_pins = 20
+    clock_pin = 21
+    data_pin = 16
     units = "f"
     thermocouples = []
     for cs_pin in cs_pins:
