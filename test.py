@@ -14,6 +14,8 @@ data_pin = 16
 units = "f"
 thermocouple = MAX31855(cs_pin, clock_pin, data_pin, units)
 while True:
-    print(thermocouple.get())
-    time.sleep(1)
-thermocouple.cleanup()
+    try:
+        print(thermocouple.get())
+        time.sleep(1)
+    except KeyboardInterrupt:
+        thermocouple.cleanup()
